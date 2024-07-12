@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "861dedab-b8c8-4a51-908c-4b3616a056cf",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24524266",
+		"_collection_link": "https://gold-space-861521.postman.co/workspace/Team-Workspace~c8601bb1-a8ab-4426-83d8-4a64579d1af5/collection/24524266-861dedab-b8c8-4a51-908c-4b3616a056cf?action=share&source=collection_link&creator=24524266"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk1MzA4LCJleHAiOjE3MjA3OTg5MDh9.xrtlEf5IxJefxxh34DMN6S6JlfhJ4paZLDIFkYOWtfk"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"lain\",\r\n  \"last_name\": \"lain\",\r\n  \"email\": \"lain@mail.com\",\r\n  \"birthday\": \"2024-07-12T14:58:41.905Z\",\r\n  \"gender\": \"MALE\",\r\n  \"password\": \"rahasia_yang_lain\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host_url}}/api/user"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk1MzA4LCJleHAiOjE3MjA3OTg5MDh9.xrtlEf5IxJefxxh34DMN6S6JlfhJ4paZLDIFkYOWtfk"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"broborww\",\r\n  \"last_name\": \"string\",\r\n  \"email\": \"string@mail.com\",\r\n  \"birthday\": \"2024-07-12T14:58:41.905Z\",\r\n  \"gender\": \"MALE\",\r\n  \"password\": \"rahasia_string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_url}}/api/user/:id",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk3MjcxLCJleHAiOjE3MjA4MDA4NzF9.aVsqA0OqRTwRyYrgIypVxkvJL9uxfiJSWIiy9bYXLoo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{host_url}}/api/user"
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk3MjcxLCJleHAiOjE3MjA4MDA4NzF9.aVsqA0OqRTwRyYrgIypVxkvJL9uxfiJSWIiy9bYXLoo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_url}}/api/user/:id",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk3MjcxLCJleHAiOjE3MjA4MDA4NzF9.aVsqA0OqRTwRyYrgIypVxkvJL9uxfiJSWIiy9bYXLoo"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host_url}}/api/user/:id",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk4OTI0LCJleHAiOjE3MjA4MDI1MjR9.8KHgzQTMeNIhJd8lpQnptP2TcVxBRwiT4P8KOTEFoZk"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"lain\",\r\n  \"description\": \"lain\",\r\n  \"image_url\": \"lain@mail.com\",\r\n  \"category\": \"ELEKTRONIK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host_url}}/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk4OTI0LCJleHAiOjE3MjA4MDI1MjR9.8KHgzQTMeNIhJd8lpQnptP2TcVxBRwiT4P8KOTEFoZk"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"lain dan yang lainnya\",\r\n  \"description\": \"lain\",\r\n  \"image_url\": \"lain@mail.com\",\r\n  \"category\": \"ELEKTRONIK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_url}}/api/product/:id",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk3MjcxLCJleHAiOjE3MjA4MDA4NzF9.aVsqA0OqRTwRyYrgIypVxkvJL9uxfiJSWIiy9bYXLoo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{host_url}}/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk3MjcxLCJleHAiOjE3MjA4MDA4NzF9.aVsqA0OqRTwRyYrgIypVxkvJL9uxfiJSWIiy9bYXLoo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_url}}/api/product/:id",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk3MjcxLCJleHAiOjE3MjA4MDA4NzF9.aVsqA0OqRTwRyYrgIypVxkvJL9uxfiJSWIiy9bYXLoo"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host_url}}/api/product/:id",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk4OTI0LCJleHAiOjE3MjA4MDI1MjR9.8KHgzQTMeNIhJd8lpQnptP2TcVxBRwiT4P8KOTEFoZk"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"ELEKTRONIK\",\r\n  \"name\": \"ELEKTRONIK\",\r\n  \"description\": \"ELEKTRONIK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host_url}}/api/category"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk4OTI0LCJleHAiOjE3MjA4MDI1MjR9.8KHgzQTMeNIhJd8lpQnptP2TcVxBRwiT4P8KOTEFoZk"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"COMPUTER\",\r\n  \"description\": \"COMPUTER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_url}}/api/category/:id",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"category",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "ELEKTRONIK"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk3MjcxLCJleHAiOjE3MjA4MDA4NzF9.aVsqA0OqRTwRyYrgIypVxkvJL9uxfiJSWIiy9bYXLoo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{host_url}}/api/category"
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk3MjcxLCJleHAiOjE3MjA4MDA4NzF9.aVsqA0OqRTwRyYrgIypVxkvJL9uxfiJSWIiy9bYXLoo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_url}}/api/category/:id",
+							"host": [
+								"{{host_url}}"
+							],
+							"path": [
+								"api",
+								"category",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "ELEKTRONIK"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk4OTI0LCJleHAiOjE3MjA4MDI1MjR9.8KHgzQTMeNIhJd8lpQnptP2TcVxBRwiT4P8KOTEFoZk"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"ELEKTRONIK\",\r\n  \"transaction_type\": \"ELEKTRONIK\",\r\n    \"quantity\": \"ELEKTRONIK\",\r\n    \"productId\": 2\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host_url}}/api/transaction"
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6ImFkbWluIiwibGFzdF9uYW1lIjpudWxsLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwiYmlydGhkYXkiOiIyMDI0LTA3LTEyVDE0OjI2OjA1LjAwNFoiLCJnZW5kZXIiOiJNQUxFIiwiaWF0IjoxNzIwNzk3MjcxLCJleHAiOjE3MjA4MDA4NzF9.aVsqA0OqRTwRyYrgIypVxkvJL9uxfiJSWIiy9bYXLoo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{host_url}}/api/category"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host_url}}/api/auth/login"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host_url",
+			"value": "http://localhost:5001"
+		}
+	]
+}
