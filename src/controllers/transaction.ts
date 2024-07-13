@@ -14,10 +14,11 @@ export const create = async (req: Request, res: Response) => {
 export const getList = async (req: Request, res: Response) => {
   try {
     const filter: filterTransaction = req.query;
-
+    console.log({ filter });
     const product = await transactionService.getAll(filter);
     res.send({ message: "succcess", data: product });
   } catch (error: any) {
+    console.log({ error });
     res.status(400).send({ message: error?.message });
   }
 };

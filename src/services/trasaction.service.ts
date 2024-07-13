@@ -21,5 +21,9 @@ export const create = async (dto: CreateTransaction) => {
 };
 
 export const getAll = async (dto?: filterTransaction) => {
-  return prisma.transaction.findMany({ where: { productId: dto?.productId }, include: { products: true } });
+  const productId = dto?.productId ? +dto.productId : undefined;
+  const transactions = await prisma.transaction.findMany({
+    where: { productId: productId },
+  });
+  return transactions;
 };

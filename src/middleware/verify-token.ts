@@ -13,6 +13,6 @@ export const verify = (req: Request & { user?: any }, res: Response, next: NextF
     req.user = verify;
     next();
   } catch (err) {
-    return res.status(400).send("Invalid token!!!");
+    return res.status(401).send({ message: "Invalid token!!!" });
   }
 };

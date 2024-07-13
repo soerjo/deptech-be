@@ -8,12 +8,14 @@ import productRoute from "./routes/product";
 import categoryRoute from "./routes/category";
 import transactionRoute from "./routes/transaction";
 import dotenv from "dotenv";
+import cors from "cors";
 import * as userService from "./services/user.service";
 dotenv.config();
 const port = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
+app.use(cors({ origin: "*" }));
 
 // Routes
 app.use("/api/auth", authRoute);

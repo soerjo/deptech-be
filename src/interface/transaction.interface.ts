@@ -15,5 +15,5 @@ export interface CreateTransaction {
 }
 
 export interface filterTransaction {
-  productId?: number;
+  productId?: string;
 }

@@ -30,7 +30,10 @@ export const loginUser = async (req: Request, res: Response) => {
   const token = jwt.sign(payload, jwtSecret, { expiresIn: jwtExpiresIn });
 
   res.header("Authorization", `Bearer ${token}`).send({
-    payload: payload,
-    jwt: token,
+    message: "success",
+    data: {
+      payload: payload,
+      jwt: token,
+    },
   });
 };

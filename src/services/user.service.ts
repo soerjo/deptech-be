@@ -39,8 +39,11 @@ export const create = async (dto: CreateUserDto) => {
   });
 };
 
-export const getAll = () => {
-  return prisma.user.findMany();
+export const getAll = async () => {
+  const users = await prisma.user.findMany();
+  return users.map((user) =>
+    Object.fromEntries(Object.entries(user).filter((password) => !password.includes("password")))
+  );
 };
 
 export const update = async (id: number, dto: Partial<UpdateUserDto>) => {
