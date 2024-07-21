@@ -10,6 +10,5 @@ deptech.postman_collection.json
 
 ```sh
 npm install
-npx prisma db push
 npm run dev
 ```
